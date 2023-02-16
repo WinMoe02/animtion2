@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive Web Design</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		html{
+			font-family: cursive;
+		}
+		.header{
+			font-size: 50px;	
+			padding: 20px;
+			background-color: orange;
+		}
+		.footer{
+			font-size: 20px;	
+			padding: 20px;
+			background-color: orange;
+		}
+
+		.menu li{
+			background-color: lightgoldenrodyellow;
+			padding: 10px;
+			margin-bottom: 7px;
+			box-shadow: 0 0 5px darkgoldenrod;
+
+		}
+		.menu li:hover{
+			background-color: orange;
+			color: white;
+		}
+
+		.row::after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+
+		[class*=col-]{
+			float: left;
+			padding: 15px;
+		}
+
+
+		/*mobile first*/
+		[class*="col-"]{
+			width: 100%;
+		}
+	
+	@media only screen and (min-width:  700px){	
+		.cols-1{width: 8.33%}
+		.cols-2{width: 16.66%}
+		.cols-3{width: 25%}
+		.cols-4{width: 33.33%}
+		.cols-5{width: 41.66%}
+		.cols-6{width: 50%}
+		.cols-7{width: 58.33%}
+		.cols-8{width: 66.66%}
+		.cols-9{width: 75%}
+		.cols-10{width: 83.33%}
+		.cols-11{width: 91.66%}
+		.cols-12{width: 100%}
+	}
+
+	@media only screen and (min-width: 998px){
+		.col-1{width: 8.33%}
+		.col-2{width: 16.66%}
+		.col-3{width: 25%}
+		.col-4{width: 33.33%}
+		.col-5{width: 41.66%}
+		.col-6{width: 50%}
+		.col-7{width: 58.33%}
+		.col-8{width: 66.66%}
+		.col-9{width: 75%}
+		.col-10{width: 83.33%}
+		.col-11{width: 91.66%}
+		.col-12{width: 100%}
+	}
+	</style>
+</head>
+<body>
+	<header class="header">Quickit</header>
+
+<div class="row">
+	<nav class="col-3 cols-4 menu">
+		<ul style="list-style-type: none;">
+			<li>Flexbox-Introduction</li>
+			<li>Create a flexbox</li>
+			<li>Nested Flexbox</li>
+			<li>Create a Responsive Layout</li>
+			<li>Create a Media Object</li>
+		</ul>
+	</nav>
+	<section class="col-6  cols-8">
+		<h1>Introduction to Flexbox</h1>
+		<p>CSS flexbox (also referred to as flexible box) provides web authors with control over how elements are positioned, aligned, and sized within their container. It allows you to do things like, specify how elements are aligned vertically and horizontally, change their order of appearance, change the direction in which all elements are laid out, and more.</p>
+	</section>
+	<aside class="col-3 cols-12" style="text-align: center;">
+		<h3>HTML</h3>
+		<p>HTML (HyperText Markup Language) is the language of the web. It allows you to create web pages and place anything you like on them (well, almost anything!).</p>
+		<h3>CSS</h3>
+		<p>CSS (Cascading Style Sheets) allows you to apply styles to web pages. More importantly, CSS enables you to do this independently of the HTML that makes up each web page.</p>
+	</aside>
+	</div>
+	<footer class="footer"> <p>Resize the browser window to see how the content respond to the resizing.</p></footer>
+</body>
+</html>
